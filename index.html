@@ -1,62 +1,78 @@
-<html>
+<!DOCTYPE html>
   <head>
     <title> Assignment 1 by Steijn Lek and Sebastian Fredrik </title>
+    <link rel="stylesheet" type="text/css" media="print" href="print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="screen.css">
   </head>
 
   <body>
-    <nav>
-      <a href="LINK"></a>
+
+    <nav class="nav">
+      <a id="link1" class="navlink" href="#home">Home</a>
+      <a id="link2"class="navlink" href="#products">Products</a>
+      <a id="link3" class="navlink" href="#contact">Contact</a>
+      <a id="link4" class="navlink" href="#about">About</a>
     </nav>
 
-    <section>
-      <h1> Welcome to </h1>
-      <h2> Sill & Cohn </h2>
+    <section id="header">
+      <h1 id="title"> <pre>Welcome to Sill & Cohn </pre> </h1>
+      <h2 id="subtitle">  <pre> A nostalgic smartphone webshop </pre> </h2>
     </section>
 
     <section>
-      <p>
-        In an ever growing <em></em>
-        <abbr title="Sill & Cohn"> SNC </abbr>
-        Some intro on Sill & Cohn <pre></pre>
+      <p class="par1">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. <em>Et harum quidem rerum facilis est et expedita distinctio.</em> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+        That's why we at <abbr title="Sill & Cohn">SNC</abbr> want to do differently.
       </p>
+
+        <figure>
+          <img src="https://bigcitiesbrightlights.files.wordpress.com/2012/05/venice-houses.jpg" alt="ALT" height="256" width="256">
+          <figcaption id="fig1cap"> Aenean commodo ligula eget dolor </figcaption>
+        </figure>
+
+      <p class="par1">
+        Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat.
+      </p>
+      <br>
+      <br>
     </section>
 
     <section>
-      <h2> Your journey </h2>
-      <strong> FAQ </strong>
+      <h2 id="striped"> Stripes are cool </h2>
+      <strong id="capitalized"> faq </strong>
 
       <dl>
         <dd> Who are Sill and Cohn? </dd>
-        <dt></dt>
+        <dt> Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</dt>
         <dd> Why trust SNC? </dd>
-        <dt></dt>
+        <dt> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</dt>
       </dl>
 
       <strong> Some statistics about SNC </strong>
 
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Vestibulum suscipit nulla quis orci.</li>
+        <li>Fusce ac felis sit amet ligula pharetra condimentum.</li>
+        <li>Maecenas egestas arcu quis ligula mattis placerat.</li>
+        <li>Suspendisse potenti.</li>
+        <li>Pellentesque commodo eros a enim.</li>
       </ul>
 
       <strong> Top 5 reasons to choose SNC over competitors </strong>
 
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Praesent ut ligula non mi varius sagittis.</li>
+        <li>Vivamus consectetuer hendrerit lacus.</li>
+        <li>Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo.</li>
+        <li>Morbi mollis tellus ac sapien.</li>
+        <li>Praesent ac massa at ligula laoreet iaculis.</li>
       </ol>
     </section>
 
     <section>
-      <table>
+      <table id="table1">
 
-        <caption> Top 3 most sold models </caption>
+        <caption id="caption"> Top 3 most sold models </caption>
         <tr>
           <th> Brand </th>
           <th> Model </th>
@@ -65,39 +81,65 @@
           <th> Image </th>
         </tr>
         <tr>
-          <td> Apple </td>
-          <td> Iphone 6s </td>
-          <td> IOS </td>
-          <td> 5 </td>
-          <td>  </td>
+          <td> Nokia </td>
+          <td> 3310 </td>
+          <td> YunOS </td>
+          <td> 1.5 </td>
+          <td><img id="img1" src="https://pbs.twimg.com/profile_images/704739718479683594/MKDurD9m_400x400.jpg" alt="undefined"></td>
+        </tr>
+        <tr>
+          <td> Blackberry </td>
+          <td> Curve </td>
+          <td> Blackberry OS </td>
+          <td> 2.44 </td>
+          <td><img id="img2" src="https://janeyborgschot.files.wordpress.com/2016/09/curve-9350-9360-9370_0.png?w=256&h=256"></td>
         </tr>
         <tr>
           <td> Samsung </td>
-          <td> Galaxy S10 </td>
+          <td> Galaxy Y </td>
           <td> Android </td>
-          <td> 4.8 </td>
-          <td>  </td>
-        </tr>
-        <tr>
-          <td> Google </td>
-          <td> Pixel 4 </td>
-          <td> Android </td>
-          <td> 4.7 </td>
-          <td>  </td>
+          <td> 3 </td>
+          <td> <img id="img3" src="https://tweakers.net/i/h6KAut1CSiZljSBbPhJo-3JfxFI=/i/1318586194.jpeg"> </td>
         </tr>
         <tr>
           <form action="https://wt.ops.labs.vu.nl/api20/14d61d4c" method="post">
-            <td> <input type="text" name="brand"> </td>
-            <td> <input type="text" name="model"> </td>
-            <td> <input type="text" name="os"> </td>
-            <td> <input type="text" name="screensize"> </td>
-            <td> <input type="text" name="image"> </td>
+            <td> <input class="input" type="text" name="brand" required> </td>
+            <td> <input class="input" type="text" name="model" required> </td>
+            <td> <input class="input" type="text" name="os" required> </td>
+            <td> <input class="input" type="text" name="screensize" required> </td>
+            <td> <input class="input" type="text" name="image" required> </td>
         </tr>
 
       </table>
 
       <input type="submit" value="submit">
       </form>
+    </section>
+
+    <section>
+      <table>
+
+        <caption> Our Reviews </caption>
+        <tr>
+          <th> Name </th>
+          <th> Rating (1-5) </th>
+          <th> Comment </th>
+        </tr>
+        <tr>
+          <td> John </td>
+          <td> 4 </td>
+          <td> Fast delivery and good service! </td>
+        <tr>
+          <td> Sarah </td>
+          <td> 5 </td>
+          <td> Already bought 5 phones here, fantastic shop! </td>
+        </tr>
+        <tr>
+          <td> Henk </td>
+          <td> 4 </td>
+          <td> Just bought a phone for my granddaughter, she is very happy! </td>
+        </tr>
+      </table>
     </section>
 
   </body>
