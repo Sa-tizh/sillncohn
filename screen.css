@@ -5,7 +5,6 @@ body {
   background-size: 100px;
 
   background-color: white;
-  background:inherit;
   margin: 16px 8px 16px 8px;
 }
 
@@ -36,6 +35,8 @@ body {
 }
 
 #header {
+  background: #FFFFFE;
+  
   padding: 15px;
 
   border-radius: 10px;
