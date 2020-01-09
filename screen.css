@@ -119,4 +119,12 @@ ul {
   background-size: 10px;
 }
 
+ol {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+  list-style: upper-roman inside;
+}
 
+dd {
+  text-indent: 1em;
+}
