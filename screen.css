@@ -11,6 +11,7 @@ body {
 .nav {
   margin-top: 130px;
   margin-bottom: 20px;
+  margin-right: 0px;
 }
 
 .navlink {
