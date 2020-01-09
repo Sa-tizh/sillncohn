@@ -1,3 +1,4 @@
+
 body {
 
   background-image: url("https://store.playstation.com/store/api/chihiro/00_09_000/container/NL/nl/999/ET0001-NPEB00130_00-AVDISRUPTI000414/1550738839000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000");
@@ -5,13 +6,12 @@ body {
   background-size: 100px;
 
   background-color: white;
-  margin: 16px 8px 16px 8px;
+  margin: 16px 20px 16px 20px;
 }
 
 .nav {
   margin-top: 130px;
   margin-bottom: 20px;
-  margin-right: 0px;
 }
 
 .navlink {
@@ -26,24 +26,32 @@ body {
   color: yellow;
 }
 
+.newlink:visited {
+  color: orange;
+}
+
+.newlink:link {
+  color: blue;
+}
+
 #title {
   margin-top: 40px;
+  margin-right: 10px;
   text-align: center;
 
   color: black;
   font-size: 40px;
+  background: white;
+  vertical-align: middle;
 }
 
 #header {
-  background: #FFFFFE;
-  
   padding: 15px;
 
   border-radius: 10px;
   border-style: dashed;
   border-color: black;
-  border-width: inherit;
-  border-spacing: inherit;
+  border-width: 6px;
 }
 
 #subtitle {
@@ -59,6 +67,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
+  text-align: left;
 }
 
 #fig1cap {
@@ -74,7 +83,7 @@ body {
   text-transform: uppercase;
 }
 
-#caption {
+caption {
   font-size: 20px;
 }
 
@@ -82,13 +91,23 @@ th {
   text-align: left;
 }
 
-#table1 {
+table {
   orphans: 3;
   widows: 4;
+  margin-top: 50px;
+  text-align: center;
+  caption-side: top;
+  border-spacing: 1px;
 }
 
-#table1, th, td, tr {
-  border: 1px solid black;
+table, th, td, tr {
+    border: 1px solid black;
+}
+
+#img0 {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
 }
 
 #img1{
@@ -116,7 +135,29 @@ th {
 
 ul {
   list-style-image:url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-16.png');
+
   background-size: 10px;
+}
+
+.col {
+  float: left;
+  width: 50%;
+}
+
+.row {
+  margin-top: 30px;
+}
+
+#disclaimer {
+  float: right;
+}
+
+#table2 {
+  border: solid grey;
+}
+
+dd {
+  text-indent: 1em;
 }
 
 ol {
@@ -125,6 +166,8 @@ ol {
   list-style: upper-roman inside;
 }
 
-dd {
-  text-indent: 1em;
-}
+/* @media screen and (max-width: 600px) {
+   .col {
+     width: 100%;
+   }
+} */
