@@ -63,7 +63,7 @@ body {
 .par1 {
   font-family: verdana, Times, serif;
   font-size: 14px;
-  margin: 10px, 10px, 10px, 10px;
+  margin: 10px 10px 10px 10px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -72,7 +72,7 @@ body {
 
 #fig1cap {
   text-decoration: overline;
-  font: normal normal normal verdana, sans-serif;
+  font: normal normal normal 12px/30px Georgia, sans-serif;
 }
 
 #striped {
