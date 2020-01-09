@@ -148,6 +148,8 @@ ul {
 
 .row {
   margin-top: 30px;
+  width: 100%;
+  overflow-x: auto;
 }
 
 #disclaimer {
