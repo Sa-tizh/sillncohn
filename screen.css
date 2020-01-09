@@ -5,7 +5,7 @@ body {
   background-size: 100px;
 
   background-color: white;
-  background:white url("https://store.playstation.com/store/api/chihiro/00_09_000/container/NL/nl/999/ET0001-NPEB00130_00-AVDISRUPTI000414/1550738839000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000") repeat-x;
+  background:white 100px url("https://store.playstation.com/store/api/chihiro/00_09_000/container/NL/nl/999/ET0001-NPEB00130_00-AVDISRUPTI000414/1550738839000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000") repeat-x;
   margin: 16px 8px 16px 8px;
 }
 
