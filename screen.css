@@ -116,7 +116,7 @@ ul {
   width: 0.4em;
 }
 
-li {
+li:before {
   width: 0.4em; 
 }
 
