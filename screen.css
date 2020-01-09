@@ -170,6 +170,12 @@ ol {
   list-style: upper-roman inside;
 }
 
+@media only screen and (max-width:768px){
+  .col{
+    width:100%
+  }
+}
+
 /* @media screen and (max-width: 600px) {
    .col {
      width: 100%;
