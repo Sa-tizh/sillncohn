@@ -1,0 +1,120 @@
+body {
+
+  background-image: url("https://store.playstation.com/store/api/chihiro/00_09_000/container/NL/nl/999/ET0001-NPEB00130_00-AVDISRUPTI000414/1550738839000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000");
+  background-repeat: repeat-x;
+  background-size: 100px;
+
+  background-color: white;
+  margin: 16px 8px 16px 8px;
+}
+
+.nav {
+  margin-top: 130px;
+  margin-bottom: 20px;
+}
+
+.navlink {
+  margin-left: 20px;
+}
+
+.navlink:hover {
+  color: red;
+}
+
+.navlink:active {
+  color: yellow;
+}
+
+#title {
+  margin-top: 40px;
+  text-align: center;
+
+  color: black;
+  font-size: 40px;
+}
+
+#header {
+  padding: 15px;
+
+  border-radius: 10px;
+  border-style: dashed;
+  border-color: black;
+}
+
+#subtitle {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+.par1 {
+  font-family: verdana, Times, serif;
+  font-size: 14px;
+  margin: 10px, 10px, 10px, 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+}
+
+#fig1cap {
+  text-decoration: overline;
+  font: normal normal normal verdana, sans-serif;
+}
+
+#striped {
+  text-decoration: underline;
+}
+
+#capitalized {
+  text-transform: uppercase;
+}
+
+#caption {
+  font-size: 20px;
+}
+
+th {
+  text-align: left;
+}
+
+#table1 {
+  orphans: 3;
+  widows: 4;
+}
+
+#table1, th, td, tr {
+    border: 1px solid black;
+}
+
+#img1{
+  width: 100px;
+  height: 100px;
+}
+
+#img2 {
+  width: 100px;
+  height: 100px;
+}
+
+#img3 {
+  width: 100px;
+  height: 100px;
+}
+
+.input:focus {
+  background-color: coral;
+}
+
+.input {
+  background-color: rgb(211, 242, 242);
+}
+
+ul {
+  /*list-style-image:url('https://thumbs.gfycat.com/BrilliantDefensiveIslandwhistler-max-1mb.gif');
+  */
+  background-size: 10px;
+  margin-left: 400px;
+}
+
+
+
