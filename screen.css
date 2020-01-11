@@ -19,7 +19,7 @@ body {
 
 /* general styling */
 
-p, pre, section, div {
+nav, p, pre, section, div {
   font-family: var(--custom-font-family);
 }
 
