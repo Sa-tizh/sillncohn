@@ -67,7 +67,7 @@ body {
 /* first section */
 
 .par1 {
-  font-family: verdana, Times, serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin: 10px 10px 10px 10px;
   font-style: normal;
@@ -84,7 +84,7 @@ body {
 
 #fig1cap {
   text-decoration: overline;
-  font: normal normal normal 12px/30px Georgia, sans-serif;
+  font: normal normal normal 12px/30px Helvetica, Arial, sans-serif;
 }
 
 .newlink:visited {
