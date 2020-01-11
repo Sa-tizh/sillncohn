@@ -26,7 +26,11 @@
           <div class="col">
             <h2>Our story</h2>
             <p class="par1">
-              At id est laborum et dolorum fuga. <em>Et harum quidem rerum facilis est et expedita distinctio.</em> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+              At id est laborum et dolorum fuga. <em>Et harum quidem rerum facilis est et expedita distinctio.</em> Nam libero tempore, cum soluta
+              nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+              repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+              molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
+              perferendis doloribus asperiores repellat
               That's why we at <abbr title="Sill & Cohn">SNC</abbr> want to do differently.<a class="newlink" href="#nothing">Learn more</a>
             </p>
           </div>
@@ -42,7 +46,7 @@
         <br>
         <br>
 
-        <div class="row">
+        <div class="row" id="lists">
           <div class="col">
             <h2 id="striped"> Stripes are cool </h2>
 
@@ -70,45 +74,45 @@
 
         <div class="row">
           <form action="https://wt.ops.labs.vu.nl/api20/14d61d4c" method="post">
-          <table id="table1">
-            <caption id="caption"> Top 3 most sold models </caption>
-            <tr>
-              <th> Brand </th>
-              <th> Model </th>
-              <th> OS </th>
-              <th> Screensize (Inch)</th>
-              <th> Image </th>
-            </tr>
-            <tr>
-              <td> Nokia </td>
-              <td> 3310 </td>
-              <td> YunOS </td>
-              <td> 1 </td>
-              <td><img id="img1" src="https://pbs.twimg.com/profile_images/704739718479683594/MKDurD9m_400x400.jpg" alt="nokia"></td>
-            </tr>
-            <tr>
-              <td> Blackberry </td>
-              <td> Curve </td>
-              <td> Blackberry OS </td>
-              <td> 2 </td>
-              <td><img id="img2" src="https://janeyborgschot.files.wordpress.com/2016/09/curve-9350-9360-9370_0.png?w=256&h=256" alt="blackberry"></td>
-            </tr>
-            <tr>
-              <td> Samsung </td>
-              <td> Galaxy Y </td>
-              <td> Android </td>
-              <td> 3 </td>
-              <td> <img id="img3" src="https://tweakers.net/i/h6KAut1CSiZljSBbPhJo-3JfxFI=/i/1318586194.jpeg" alt="samsung"> </td>
-            </tr>
-            <tr>
-                <td> <input class="input" type="text" name="brand" required> </td>
-                <td> <input class="input" type="text" name="model" required> </td>
-                <td> <input class="input" type="text" name="os" required> </td>
-                <td> <input class="input" type="text" name="screensize" required> </td>
-                <td> <input class="input" type="text" name="image" required> </td>
-            </tr>
-          </table>
-          <input type="submit" value="submit">
+            <table id="table1">
+              <caption id="caption"> Top 3 most sold models </caption>
+              <tr>
+                <th> Brand </th>
+                <th> Model </th>
+                <th class="gone"> OS </th>
+                <th class="gone"> Screensize (Inch)</th>
+                <th class="gone"> Image </th>
+              </tr>
+              <tr>
+                <td> Nokia </td>
+                <td> 3310 </td>
+                <td class="gone"> YunOS </td>
+                <td class="gone"> 1 </td>
+                <td class="gone"><img id="img1" src="https://pbs.twimg.com/profile_images/704739718479683594/MKDurD9m_400x400.jpg" alt="nokia"></td>
+              </tr>
+              <tr>
+                <td> Blackberry </td>
+                <td> Curve </td>
+                <td class="gone"> Blackberry OS </td>
+                <td class="gone"> 2 </td>
+                <td class="gone"><img id="img2" src="https://janeyborgschot.files.wordpress.com/2016/09/curve-9350-9360-9370_0.png?w=256&h=256" alt="blackberry"></td>
+              </tr>
+              <tr>
+                <td> Samsung </td>
+                <td> Galaxy Y </td>
+                <td class="gone"> Android </td>
+                <td class="gone"> 3 </td>
+                <td class="gone"> <img id="img3" src="https://tweakers.net/i/h6KAut1CSiZljSBbPhJo-3JfxFI=/i/1318586194.jpeg" alt="samsung"> </td>
+              </tr>
+              <tr class="gone">
+                  <td> <input class="input" type="text" name="brand" required> </td>
+                  <td> <input class="input" type="text" name="model" required> </td>
+                  <td> <input class="input" type="text" name="os" required> </td>
+                  <td> <input class="input" type="text" name="screensize" required> </td>
+                  <td> <input class="input" type="text" name="image" required> </td>
+              </tr>
+            </table>
+            <input type="submit" value="submit">
           </form>
         </div>
 
@@ -119,8 +123,8 @@
             <dt>Who are Sill and Cohn?</dt>
             <dd> Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</dd>
             <dt> Why trust SNC? </dt>
-            <dd> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</dd>
-            <!-- <dt><a id="visited" href="#nothing">Learn more</a></dt> -->
+            <dd> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+              adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</dd>
           </dl>
         </div>
 
@@ -151,8 +155,8 @@
         </div>
 
         <pre id="disclaimer">
-          aa;afsdlkfjas;fjas;ljfkasdlkfjasd;lfkjsad
-          afdsl;kjf;alsdkjfsa;lkjfas;ldfja;lfjasld;
+          This website is made by Sebas and Steijn, all rights reserved
+          &copy; 2020 Sill and Cohn.com
         </pre>
 
     </body>
