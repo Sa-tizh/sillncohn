@@ -24,7 +24,7 @@
   #header { page-break-before: always; }
   #lists { page-break-after: always; }
   #table1 { page-break-before: always; }
-  #gone { display: none; }
+  .gone { display: none; }
   #capitalized { text-transform: uppercase; }
   #disclaimer { float: right; }
   
