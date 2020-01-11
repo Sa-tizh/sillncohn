@@ -1,3 +1,10 @@
+/* variables */
+
+:root {
+  --custom-color: black;
+}
+
+/* main body part */
 
 body {
 
@@ -8,6 +15,8 @@ body {
   background-color: white;
   margin: 16px 20px 16px 20px;
 }
+
+/* navigation bar styling */
 
 .nav {
   margin-top: 130px;
@@ -26,20 +35,14 @@ body {
   color: yellow;
 }
 
-.newlink:visited {
-  color: orange;
-}
-
-.newlink:link {
-  color: blue;
-}
+/* header part with titles styling */
 
 #title {
   margin-top: 40px;
   margin-right: 10px;
   text-align: center;
 
-  color: black;
+  color: var(--custom-color);
   font-size: 40px;
   background: white;
   vertical-align: middle;
@@ -57,8 +60,11 @@ body {
 #subtitle {
   text-align: center;
   font-size: 25px;
-  color: black;
+  color: var(--custom-color);
 }
+
+
+/* first section */
 
 .par1 {
   font-family: verdana, Times, serif;
@@ -70,18 +76,44 @@ body {
   text-align: left;
 }
 
+#img0 {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
 #fig1cap {
   text-decoration: overline;
   font: normal normal normal 12px/30px Georgia, sans-serif;
 }
 
+.newlink:visited {
+  color: orange;
+}
+
+.newlink:link {
+  color: blue;
+}
+
+/* lists section */
+
 #striped {
   text-decoration: underline;
 }
 
-#capitalized {
-  text-transform: uppercase;
+ul {
+  list-style-image:url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-16.png');
+
+  background-size: 10px;
 }
+
+ol {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+  list-style: upper-roman inside;
+}
+
+/* first table section */
 
 caption {
   font-size: 20px;
@@ -104,12 +136,6 @@ table, th, td, tr {
   border: 1px solid black;
   border-collapse: collapse;
   overflow-x: auto
-}
-
-#img0 {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
 }
 
 #img1{
@@ -135,11 +161,7 @@ table, th, td, tr {
   background-color: rgb(211, 242, 242);
 }
 
-ul {
-  list-style-image:url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-16.png');
-
-  background-size: 10px;
-}
+/* responsive design */
 
 .col {
   float: left;
@@ -152,32 +174,54 @@ ul {
   overflow-x: auto;
 }
 
-#disclaimer {
-  float: right;
-}
+/* second table */
 
 #table2 {
   border: solid grey;
 }
 
+
+/* last section */
+
 dd {
   text-indent: 1em;
 }
 
-ol {
-  list-style-type: upper-roman;
-  list-style-position: inside;
-  list-style: upper-roman inside;
+#capitalized {
+  text-transform: uppercase;
 }
 
-@media only screen and (max-width:768px){
+
+/* footer */
+
+#disclaimer {
+  float: right;
+  margin-top: 100px;
+}
+
+/* mobile styling */
+
+@media only screen and (max-width: 600px){
   .col{
     width:100%
   }
+
+  .gone {
+    display: none;
+  }
+
+  table {
+    margin: 20px;
+  }
+
+  td, th, tr {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  input {
+    display: none;
+  }
 }
 
-/* @media screen and (max-width: 600px) {
-   .col {
-     width: 100%;
-   }
-} */
+
