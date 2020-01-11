@@ -1,0 +1,29 @@
+@media print {
+
+  a, input{
+    display: none;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  body {
+    color: black;
+    background-color: white;
+  }
+
+  #header {page-break-before: always;}
+  #lists {page-break-after: always;}
+  #table1 {
+    page-break-before: always;
+  }
+  #disclaimer {
+    float: right;
+  }
+
+  table, th, td, tr {
+    border: 1px solid black;
+  }
+}
