@@ -2,6 +2,7 @@
 
 :root {
   --custom-color: black;
+  --custom-font-family: Helvetica, Arial, sans-serif;
 }
 
 /* main body part */
@@ -14,6 +15,12 @@ body {
 
   background-color: white;
   margin: 16px 20px 16px 20px;
+}
+
+/* general styling */
+
+p, pre, section, div {
+  font-family: var(--custom-font-family);
 }
 
 /* navigation bar styling */
@@ -67,7 +74,6 @@ body {
 /* first section */
 
 .par1 {
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin: 10px 10px 10px 10px;
   font-style: normal;
