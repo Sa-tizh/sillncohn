@@ -1,29 +1,31 @@
 @media print {
 
-  a, input{
-    display: none;
-  }
-
-  img {
-    height: 100px;
-    width: 100px;
-  }
-
   body {
     color: black;
     background-color: white;
   }
+  
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  a, input{ display: none; }
 
-  #header {page-break-before: always;}
-  #lists {page-break-after: always;}
-  #table1 {
-    page-break-before: always;
-  }
-  #disclaimer {
-    float: right;
-  }
+  table {
+    orphans: 3;
+    widows: 4;
+  } 
 
   table, th, td, tr {
     border: 1px solid black;
-  }
+  }  
+  
+  #header { page-break-before: always; }
+  #lists { page-break-after: always; }
+  #table1 { page-break-before: always; }
+  #gone { display: none; }
+  #capitalized { text-transform: uppercase; }
+  #disclaimer { float: right; }
+  
 }
