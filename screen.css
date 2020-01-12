@@ -228,6 +228,12 @@ dd {
   input {
     display: none;
   }
+  
+  #disclaimer {
+    float: none;
+  }
+  
+  
 }
 
 
