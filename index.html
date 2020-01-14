@@ -1,11 +1,13 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
-      <title> Assignment 2 by Steijn Lek and Sebastian Fredrik </title>
+      <title> Assignment 1 by Steijn Lek and Sebastian Fredrik </title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" media="print" href="print.css">
       <link rel="stylesheet" type="text/css" media="screen" href="screen.css">
+      <script src="main.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -77,31 +79,19 @@
               <caption id="caption"> Top 3 most sold models </caption>
               <tr>
                 <th id="th1"> Brand </th>
-                <th id="th1"> Model </th>
-                <th id="th1" class="gone"> OS </th>
-                <th id="th1" class="gone"> Screensize (Inch)</th>
-                <th id="th1" class="gone"> Image </th>
+                <th id="th2"> Model </th id>
+                <th id="th3" class="gone"> OS </th>
+                <th id="th4" class="gone"> Screensize (Inch)</th>
+                <th class="gone"> Image </th>
               </tr>
               <tr>
-                <td> Nokia </td>
-                <td> 3310 </td>
-                <td class="gone"> YunOS </td>
-                <td class="gone"> 1 </td>
-                <td class="gone"><img id="img1" src="https://pbs.twimg.com/profile_images/704739718479683594/MKDurD9m_400x400.jpg" alt="nokia"></td>
+
               </tr>
               <tr>
-                <td> Blackberry </td>
-                <td> Curve </td>
-                <td class="gone"> Blackberry OS </td>
-                <td class="gone"> 2 </td>
-                <td class="gone"><img id="img2" src="https://janeyborgschot.files.wordpress.com/2016/09/curve-9350-9360-9370_0.png?w=256&h=256" alt="blackberry"></td>
+
               </tr>
               <tr>
-                <td> Samsung </td>
-                <td> Galaxy Y </td>
-                <td class="gone"> Android </td>
-                <td class="gone"> 3 </td>
-                <td class="gone"> <img id="img3" src="https://tweakers.net/i/h6KAut1CSiZljSBbPhJo-3JfxFI=/i/1318586194.jpeg" alt="samsung"> </td>
+
               </tr>
               <tr class="gone">
                   <td> <input class="input" type="text" name="brand" required> </td>
@@ -112,6 +102,7 @@
               </tr>
             </table>
             <input type="submit" value="submit">
+            <input id="reset" type="button" value="reset">
           </form>
         </div>
 
@@ -161,5 +152,4 @@
 
     </body>
 
-    <script src="main.js"></script>
   </html>
