@@ -45,7 +45,7 @@ function sortTable(n) {
   } 
 }
 
-
+/*
 resetButton = document.getElementById("reset");
 
 resetButton.addEventListener("click", resetForm);
@@ -99,3 +99,4 @@ function resetForm(){
                 table.appendChild(tr);
             });
         }
+*/
