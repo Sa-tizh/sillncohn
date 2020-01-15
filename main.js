@@ -4,7 +4,7 @@ var tableHeader4 = document.getElementById("th4");
 
 var n = 0;
 
-tableHeader1 = document.getElementById("th1");
+tableHeader1 = document.getElementById('th1');
 tableHeader1.addEventListener("click", function() {n = 0; sortTable(n);});
 tableHeader2.addEventListener("click", function() {n = 1; sortTable(n);});
 tableHeader3.addEventListener("click", function() {n = 2; sortTable(n);});
