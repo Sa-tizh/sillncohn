@@ -1,4 +1,5 @@
 var n = 0;
+//test
 
 document.getElementById("th_one").addEventListener("click", function() {n = 0; sortTable(n);});
 document.getElementById("th_two").addEventListener("click", function() {n = 1; sortTable(n);});
