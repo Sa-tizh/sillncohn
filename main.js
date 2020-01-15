@@ -1,9 +1,9 @@
 var n = 0;
 
-document.getElementById("th1").addEventListener("click", function() {n = 0; sortTable(n);});
-document.getElementById("th2").addEventListener("click", function() {n = 1; sortTable(n);});
-document.getElementById("th3").addEventListener("click", function() {n = 2; sortTable(n);});
-document.getElementById("th4").addEventListener("click", function() {n = 3; sortTable(n);});
+document.getElementById("th_one").addEventListener("click", function() {n = 0; sortTable(n);});
+document.getElementById("th_two").addEventListener("click", function() {n = 1; sortTable(n);});
+document.getElementById("th_three").addEventListener("click", function() {n = 2; sortTable(n);});
+document.getElementById("th_four").addEventListener("click", function() {n = 3; sortTable(n);});
 
 function sortTable(n) { 
   var table, i, x, y; 
