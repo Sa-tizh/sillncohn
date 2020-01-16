@@ -159,6 +159,10 @@ table, th, td, tr {
   height: 100px;
 }
 
+.defaultImg {
+  height: 100px;
+}
+
 .input:focus {
   background-color: coral;
 }
@@ -228,12 +232,10 @@ dd {
   input {
     display: none;
   }
-  
+
   #disclaimer {
     float: none;
   }
-  
-  
+
+
 }
-
-
