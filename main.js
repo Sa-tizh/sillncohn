@@ -1,6 +1,6 @@
 window.onload = function(){
 
-  console.log("test2")
+  console.log("test3")
   
   document.getElementById("th_one").addEventListener("click", function() {sortTable(0);});
   document.getElementById("th_two").addEventListener("click", function() {sortTable(1);});
@@ -72,7 +72,7 @@ window.onload = function(){
               //Build the XMLHttpRequest (aka AJAX Request)
               xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange = function() { 
-                  console.log(readyState + " " + status);
+                  console.log(this.readyState + " " + this.status);
                   if (this.readyState == 4 && this.status == 200) {//when a good response is given do this
 
                       var data = JSON.parse(this.responseText); // convert the response to a json object
