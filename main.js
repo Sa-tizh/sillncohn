@@ -90,7 +90,7 @@ window.onload = function(){
                   '<td>' + object.os + '</td>' +
                   '<td>' + object.screensize + '</td>' +
                   '<td>' + object.image + '</td>';
-                  table.insertBefore(tr, table.childNodes[table.childNodes.length-2]);
+                  table.insertBefore(tr, table.childNodes[table.childNodes.length]);
               });
   
 }
