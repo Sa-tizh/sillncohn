@@ -59,7 +59,7 @@ window.onload = function(){
     window.setInterval(updateTable, 2000)
   
     function updateTable(){
-      var currTable = document.getElementById("table1")
+      var currTable = document.getElementById("table1").childNodes[0]
       var tableLength = currTable.childNodes.length
       
       for(var i = 1; i < tableLength - 2; i++){
