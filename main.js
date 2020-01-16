@@ -112,6 +112,5 @@ window.onload = function(){
                                     '<td> <img class="defaultImg" src="' +  object.image + '"></td>';
                     
                     $(tr).insertAfter(table.lastChild);
-                    $("#inputrow").insertAfter(table.lastChild);
                 });
             }
