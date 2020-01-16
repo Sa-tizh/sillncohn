@@ -99,7 +99,7 @@ window.onload = function(){
                                     '<td>' + object.model + '</td>' +
                                     '<td>' + object.os + '</td>' +
                                     '<td>' + object.screensize + '</td>' +
-                                    '<td>' + object.image + '</td>';
+                                    '<td> <img class="defaultImg" src="' +  object.image + '"></td>';
                     
                     $(tr).insertAfter(table.lastChild);
                     $("#inputrow").insertAfter(table.lastChild);
