@@ -56,6 +56,27 @@ window.onload = function(){
         xhttpreset.send();
     }
   
+  $( "#rowAdd" ).submit(function( e ) {
+    e.preventDefault();
+    $.ajax({
+        url: "https://wt.ops.labs.vu.nl/api20/14d61d4c",
+        type:'POST',
+        data:
+        {
+            brand: $('#brand').val(),
+            model: $('#model').val(),
+            os: $('#os').val(),
+            screensize: $('#screensize').val(),
+            image: $('#image').val()
+        },
+        success: function(msg)
+        {
+
+            alert('test');
+        }               
+    });
+  });
+  
     // __________________________________________
   
   }
