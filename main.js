@@ -1,47 +1,53 @@
 window.onload = function(){
-
-  console.log("test3")
   
-  document.getElementById("th_one").addEventListener("click", function() {sortTable(0);});
-  document.getElementById("th_two").addEventListener("click", function() {sortTable(1);});
-  document.getElementById("th_three").addEventListener("click", function() {sortTable(2);});
-  document.getElementById("th_four").addEventListener("click", function() {sortTable(3);});
+  setInterval(startPage(), 2000);
 
-  function sortTable(n) { 
-    var table, i, x, y; 
-    table = document.getElementById("table1"); 
-    var switching = true; 
+    function startPage(){
 
-    // Run loop until no switching is needed 
-    while (switching) { 
-        switching = false; 
-        var rows = table.rows; 
+  document.getElementById("th1").addEventListener("click", function(){ sortTable(0, 1)});
+   document.getElementById("th2").addEventListener("click", function(){ sortTable(1, 1)});
+   document.getElementById("th3").addEventListener("click", function(){ sortTable(2, 1)});
+   document.getElementById("th4").addEventListener("click", function(){ sortTable(3, 1)});
 
-        // Loop to go through all rows 
-        for (i = 1; i < (rows.length - 2); i++) { 
-            var Switch = false; 
+   document.getElementById("th2.1").addEventListener("click", function(){ sortTable(0, 2)});
+   document.getElementById("th2.2").addEventListener("click", function(){ sortTable(1, 2)});
+   document.getElementById("th2.3").addEventListener("click", function(){ sortTable(2, 2)});
+ 
+   function sortTable(n, tableNumber) { 
+       console.log("done");
+       var table, i, x, y; 
+       table = document.getElementById("table" + tableNumber); 
+       var switching = true; 
 
-            // Fetch 2 elements that need to be compared 
-            x = rows[i].getElementsByTagName("TD")[n]; 
-            y = rows[i + 1].getElementsByTagName("TD")[n]; 
+       // Run loop until no switching is needed 
+       while (switching) { 
+           switching = false; 
+           var rows = table.rows; 
 
-            // Check if 2 rows need to be switched 
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
-                { 
+           // Loop to go through all rows 
+           for (i = 1; i < (rows.length + (tableNumber - 3)); i++) { 
+               var Switch = false; 
 
-                // If yes, mark Switch as needed and break loop 
-                Switch = true; 
-                break; 
-            } 
-        } 
-        if (Switch) { 
-            // Function to switch rows and mark switch as completed 
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
-            switching = true; 
-        } 
-    } 
-  }
+               // Fetch 2 elements that need to be compared 
+               x = rows[i].getElementsByTagName("TD")[n]; 
+               y = rows[i + 1].getElementsByTagName("TD")[n]; 
 
+               // Check if 2 rows need to be switched 
+               if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+                   { 
+
+                   // If yes, mark Switch as needed and break loop 
+                   Switch = true; 
+                   break; 
+               } 
+           } 
+           if (Switch) { 
+               // Function to switch rows and mark switch as completed 
+               rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
+               switching = true; 
+           } 
+       } 
+   } 
   
   resetButton = document.getElementById("reset");
 
@@ -101,3 +107,4 @@ window.onload = function(){
                   table.insertBefore(tr, table.lastChild);
               });
           }
+}
