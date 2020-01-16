@@ -1,7 +1,7 @@
 var n = 0;
 //test
 
-document.getElementById("th_one").addEventListener("click", function() {n = 0; sortTable(n);});
+document.getElementById("th_one").addEventListener("click", function() {n = 1; sortTable(n);});
 document.getElementById("th_two").addEventListener("click", function() {n = 1; sortTable(n);});
 document.getElementById("th_three").addEventListener("click", function() {n = 2; sortTable(n);});
 document.getElementById("th_four").addEventListener("click", function() {n = 3; sortTable(n);});
