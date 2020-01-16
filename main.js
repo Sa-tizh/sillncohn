@@ -111,6 +111,6 @@ window.onload = function(){
                                     '<td>' + object.screensize + '</td>' +
                                     '<td> <img class="defaultImg" src="' +  object.image + '"></td>';
                     
-                    $(tr).insertAfter(table.lastChild);
+                    $(tr).insertBefore(table.lastChild);
                 });
             }
