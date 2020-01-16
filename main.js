@@ -59,7 +59,7 @@ window.onload = function(){
     window.setInterval(updateTable, 2000)
   
     function updateTable(){
-      var currTable = document.getElementById("table1").childNodes[1];
+      var currTable = document.getElementById("tablebody1");
       var tableLength = currTable.childNodes.length;
       
       for(var i = 1; i < tableLength - 2; i++){
@@ -101,7 +101,7 @@ window.onload = function(){
   
             //this function appends the json data to the table 'gable'
             function append_json(data){
-                var table = document.getElementById("table1").childNodes[1];
+                var table = document.getElementById("tablebody1");
                 console.log(JSON.stringify(data));
                 data.forEach(function(object) {
                     var tr = document.createElement('tr');
