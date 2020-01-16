@@ -101,7 +101,7 @@ window.onload = function(){
   
             //this function appends the json data to the table 'gable'
             function append_json(data){
-                var table = document.getElementById("table1").childNodes[0];
+                var table = document.getElementById("table1").childNodes[1];
                 console.log(JSON.stringify(data));
                 data.forEach(function(object) {
                     var tr = document.createElement('tr');
