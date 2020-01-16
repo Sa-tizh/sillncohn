@@ -56,6 +56,16 @@ window.onload = function(){
         xhttpreset.send();
     }
   
+    window.setInterval(updateTable, 2000)
+  
+    function updateTable(){
+      var currTable = document.getElementById("table1")
+      var tableLength = currTable.childNodes.length
+      
+      for(var i = 1; i < tableLength - 2; i++){
+         currTable.removeChild(currTable.childNodes[i])
+      }
+    }
     // __________________________________________
   
   }
