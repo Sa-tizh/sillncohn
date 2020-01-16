@@ -1,6 +1,6 @@
 window.onload = function(){
 
-  console.log("test")
+  console.log("test2")
   
   document.getElementById("th_one").addEventListener("click", function() {sortTable(0);});
   document.getElementById("th_two").addEventListener("click", function() {sortTable(1);});
