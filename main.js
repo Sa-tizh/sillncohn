@@ -62,7 +62,7 @@ window.onload = function(){
       var currTable = document.getElementById("tablebody1");
       var tableLength = currTable.childNodes.length;
       
-      for(var i = 1; i < tableLength - 2; i++){
+      for(var i = 2; i < tableLength - 2; i++){
          currTable.removeChild(currTable.childNodes[i])
       }
     }
