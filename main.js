@@ -1,8 +1,4 @@
 window.onload = function(){
-  
-  setInterval(startPage(), 2000);
-
-    function startPage(){
 
   document.getElementById("th1").addEventListener("click", function(){ sortTable(0, 1)});
    document.getElementById("th2").addEventListener("click", function(){ sortTable(1, 1)});
@@ -107,4 +103,3 @@ window.onload = function(){
                   table.insertBefore(tr, table.lastChild);
               });
           }
-}
