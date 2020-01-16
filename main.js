@@ -72,6 +72,7 @@ window.onload = function(){
               //Build the XMLHttpRequest (aka AJAX Request)
               xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange = function() { 
+                  console.log(readyState + " " + status);
                   if (this.readyState == 4 && this.status == 200) {//when a good response is given do this
 
                       var data = JSON.parse(this.responseText); // convert the response to a json object
