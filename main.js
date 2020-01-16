@@ -80,7 +80,7 @@ window.onload = function(){
                   }
               }
               //set the request destination and type
-              xmlhttp.open("POST", json_url, true);
+              xmlhttp.open("GET", json_url, true);
               //set required headers for the request
               xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
               // send the request
