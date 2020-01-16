@@ -1,5 +1,7 @@
 document.onload = function(){
 
+  console.log("test")
+  
   document.getElementById("th_one").addEventListener("click", function() {sortTable(0);});
   document.getElementById("th_two").addEventListener("click", function() {sortTable(1);});
   document.getElementById("th_three").addEventListener("click", function() {sortTable(2);});
