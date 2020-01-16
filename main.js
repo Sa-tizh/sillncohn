@@ -98,6 +98,6 @@ window.onload = function(){
                   '<td>' + object.os + '</td>' +
                   '<td>' + object.screensize + '</td>' +
                   '<td>' + object.image + '</td>';
-                  table.appendChild(tr);
+                  table.appendChild(tr, document.getElementById("form_row"));
               });
           }
