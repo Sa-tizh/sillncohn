@@ -56,7 +56,11 @@ window.onload = function(){
 
   // __________________________________________
 
-          //first add an event listener for page load
+}
+
+
+
+//first add an event listener for page load
           document.addEventListener( "DOMContentLoaded", get_json_data, false ); // get_json_data is the function name that will fire on page load
 
           //this function is in the event listener and will execute on page load
@@ -96,5 +100,3 @@ window.onload = function(){
                   table.appendChild(tr);
               });
           }
-
-}
