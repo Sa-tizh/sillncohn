@@ -100,7 +100,7 @@ window.onload = function(){
                                     '<td>' + object.screensize + '</td>' +
                                     '<td> <img class="defaultImg" src="' +  object.image + '"></td>';
                     
-                    $(tr).insertBefore(table.lastChild);
+                    $(tr).insertBefore(document.getElementById("inputrow"));
                 });
   }
   
