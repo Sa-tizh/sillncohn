@@ -40,7 +40,7 @@ document.onload = function(){
     } 
   }
 
-  /*
+  
   resetButton = document.getElementById("reset");
 
   resetButton.addEventListener("click", resetForm);
@@ -95,5 +95,4 @@ document.onload = function(){
               });
           }
 
-  */
 }
