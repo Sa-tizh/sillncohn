@@ -61,6 +61,7 @@ window.onload = function(){
   
     function updateTable(){
       
+      //test
       get_table_data();
       
     }
