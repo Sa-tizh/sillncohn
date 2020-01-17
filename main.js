@@ -63,7 +63,7 @@ window.onload = function(){
       var tableLength = currTable.childNodes.length;
       var i;
       
-      for(i = 0; i < tableLength - 1; i++){
+      for(i = tableLength - 1; i > 0 ; i--){
         if(currTable.childNodes[i].id != "tableheader" && currTable.childNodes[i].id != "inputrow"){
           currTable.removeChild(currTable.childNodes[i])
         }
