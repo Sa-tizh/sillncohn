@@ -57,19 +57,9 @@ window.onload = function(){
     }
     
     //test
-    window.setInterval(updateTable, 200)
+    window.setInterval(updateTable, 2000)
   
     function updateTable(){
-      
-      var currTable = document.getElementById("tablebody1");
-      var tableLength = currTable.childNodes.length;
-      var i;
-      
-      for(i = tableLength - 1; i > 0 ; i--){
-        if(currTable.childNodes[i].id != "tableheader" && currTable.childNodes[i].id != "inputrow"){
-          currTable.removeChild(currTable.childNodes[i])
-        }
-      }
       
       get_table_data();
       
@@ -99,7 +89,16 @@ window.onload = function(){
             }
             //this function appends the json data to the table 'gable'
             function append_json(data){
-                var table = document.getElementById("tablebody1");
+                var currTable = document.getElementById("tablebody1");
+                var tableLength = currTable.childNodes.length;
+                var i;
+      
+                for(i = tableLength - 1; i > 0 ; i--){
+                  if(currTable.childNodes[i].id != "tableheader" && currTable.childNodes[i].id != "inputrow"){
+                    currTable.removeChild(currTable.childNodes[i])
+                  }
+                 }
+        
                 console.log(JSON.stringify(data));
                 data.forEach(function(object) {
                     var tr = document.createElement('tr');
