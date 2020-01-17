@@ -56,7 +56,7 @@ window.onload = function(){
         xhttpreset.send();
     }
   
-    window.setInterval(updateTable, 2000)
+    window.setInterval(updateTable, 200)
   
     function updateTable(){
       var currTable = document.getElementById("tablebody1");
