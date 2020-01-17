@@ -57,17 +57,12 @@ window.onload = function(){
     }
     
     //test
-    window.setInterval(updateTable, 2000)
+    setTableData();
+    window.setInterval(setTableData, 2000)
   
-    function updateTable(){
-      
-      //test
-      get_table_data();
-      
-    }
     // __________________________________________
     // Relative URL of external json file
-            function get_table_data(){      
+            function setTableData(){      
                 var json_url = "https://wt.ops.labs.vu.nl/api20/14d61d4c/";
   
                 //Build the XMLHttpRequest (aka AJAX Request)
@@ -77,7 +72,7 @@ window.onload = function(){
                     if (this.readyState == 4 && this.status == 200) {//when a good response is given do this
   
                         var data = JSON.parse(this.responseText); // convert the response to a json object
-                        append_json(data);// pass the json object to the append_json function
+                        updateJson(data);// pass the json object to the append_json function
                     }
                 }
                 //set the request destination and type
@@ -89,7 +84,7 @@ window.onload = function(){
                 }
             }
             //this function appends the json data to the table 'gable'
-            function append_json(data){
+            function updateJson(data){
                 var currTable = document.getElementById("tablebody1");
                 var tableLength = currTable.childNodes.length;
                 var i;
