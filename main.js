@@ -55,7 +55,8 @@ window.onload = function(){
         xhttpreset.open("GET", "https://wt.ops.labs.vu.nl/api20/14d61d4c/reset", true);
         xhttpreset.send();
     }
-  
+    
+    //test
     window.setInterval(updateTable, 2000)
   
     function updateTable(){
