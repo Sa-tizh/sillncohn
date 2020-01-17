@@ -57,9 +57,10 @@ window.onload = function(){
     }
     
     //test
-    window.setInterval(updateTable, 2000)
+    window.setInterval(updateTable, 200)
   
     function updateTable(){
+      
       var currTable = document.getElementById("tablebody1");
       var tableLength = currTable.childNodes.length;
       var i;
@@ -69,9 +70,13 @@ window.onload = function(){
           currTable.removeChild(currTable.childNodes[i])
         }
       }
+      
+      get_table_data();
+      
     }
     // __________________________________________
     // Relative URL of external json file
+            function get_table_data(){      
                 var json_url = "https://wt.ops.labs.vu.nl/api20/14d61d4c/";
   
                 //Build the XMLHttpRequest (aka AJAX Request)
@@ -90,8 +95,8 @@ window.onload = function(){
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 // send the request
                 xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
+                }
             }
-  
             //this function appends the json data to the table 'gable'
             function append_json(data){
                 var table = document.getElementById("tablebody1");
