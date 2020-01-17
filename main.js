@@ -61,8 +61,9 @@ window.onload = function(){
     function updateTable(){
       var currTable = document.getElementById("tablebody1");
       var tableLength = currTable.childNodes.length;
+      var i;
       
-      for(var i = 0; i < tableLength - 1; i++){
+      for(i = 0; i < tableLength - 1; i++){
         if(currTable.childNodes[i].id != "tableheader" && currTable.childNodes[i].id != "inputrow"){
           currTable.removeChild(currTable.childNodes[i])
         }
