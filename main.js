@@ -56,8 +56,9 @@ window.onload = function(){
         xhttpreset.send();
     }
     
+    var update_time = 2000;
     setTableData();
-    window.setInterval(setTableData, update)
+    window.setInterval(setTableData, update_time)
   
     function setTableData(){
         // Relative URL of external json file
