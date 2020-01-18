@@ -12,7 +12,7 @@ window.onload = function(){
      function sortTable(n, tableNumber) { 
          console.log("done");
          var table, i, x, y; 
-         table = document.getElementById("table" + tableNumber); 
+         table = document.getElementById("tablebody" + tableNumber); 
          var switching = true; 
   
          // Run loop until no switching is needed 
@@ -21,7 +21,7 @@ window.onload = function(){
              var rows = table.rows; 
   
              // Loop to go through all rows 
-             for (i = 1; i < (rows.length + (tableNumber - 3)); i++) { 
+             for (i = 0; i < (rows.length - 1); i++) { 
                  var Switch = false; 
   
                  // Fetch 2 elements that need to be compared 
@@ -87,13 +87,13 @@ window.onload = function(){
             //this function appends the json data to the table 'gable'
             function updateJson(data){
                 //test
-                var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "</tr>";
+                //var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "</tr>";
                 //var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "</tr>";
               
                 var currTable = document.getElementById("tablebody1");
                 var tableLength = currTable.childNodes.length;
                 var i;
-                var table_html = table_begin_html;
+                var table_html = "";
               /*
                 for(i = tableLength - 1; i > 0 ; i--){
                   if(currTable.childNodes[i].id != "tableheader" && currTable.childNodes[i].id != "inputrow"){
