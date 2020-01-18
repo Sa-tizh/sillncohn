@@ -29,10 +29,17 @@ window.onload = function(){
                  x = rows[i].getElementsByTagName("TD")[n]; 
                  y = rows[i + 1].getElementsByTagName("TD")[n]; 
   
-                 // Check if 2 rows need to be switched 
-                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+                 // Check if 2 rows need to be switched, for text 
+                 if (n != 3 && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
                      { 
-  
+                     // If yes, mark Switch as needed and break loop 
+                     Switch = true; 
+                     break; 
+                 }
+               
+                 // Check if 2 rows need to be switched, for numbers
+                 if (n == 3 && parseInt(x.innerHTML) > parseInt(y.innerHTML))
+                     { 
                      // If yes, mark Switch as needed and break loop 
                      Switch = true; 
                      break; 
