@@ -58,8 +58,8 @@ window.onload = function(){
     
     //test
   
-    var table_begin_html = document.getElementById("tablebody1").firstElementChild.innerHTML;
-    var table_end_html = document.getElementById("tablebody1").firstElementChild.innerHTML;
+    var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "<tr>";
+    var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "<tr>";
     console.log(table_begin_html);
     console.log(table_end_html);
   
