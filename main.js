@@ -60,6 +60,7 @@ window.onload = function(){
   
     var temp_tbody = document.createElement('tbody');
     temp_tbody.childNodes = document.getElementById("tablebody1").childNodes;
+    console.log(temp_tbody.childNodes)
     temp_tbody.removeChild(temp_tbody.lastChild);
     var init_tbody = temp_tbody;   
   
