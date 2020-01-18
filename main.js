@@ -86,6 +86,7 @@ window.onload = function(){
             }
             //this function appends the json data to the table 'gable'
             function updateJson(data){
+                //test
                 var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "</tr>";
                 var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "</tr>";
               
