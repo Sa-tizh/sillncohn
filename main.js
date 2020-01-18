@@ -88,7 +88,7 @@ window.onload = function(){
             function updateJson(data){
                 //test
                 var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "</tr>";
-                var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "</tr>";
+                //var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "</tr>";
               
                 var currTable = document.getElementById("tablebody1");
                 var tableLength = currTable.childNodes.length;
@@ -110,7 +110,7 @@ window.onload = function(){
                                     '<td>' + object.screensize + '</td>' +
                                     '<td> <img class="defaultImg" src="' +  object.image + '"></td></tr>';
                 });
-              currTable.innerHTML = table_html + table_end_html;
+              currTable.innerHTML = table_html;
             }
   
   
