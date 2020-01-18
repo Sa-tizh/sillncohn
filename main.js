@@ -57,6 +57,12 @@ window.onload = function(){
     }
     
     //test
+  
+    var temp_tbody = document.createElement('tbody');
+    temp_tbody.childNodes = document.getElementById("tablebody1").childNodes;
+    temp_tbody.removeChild(temp_tbody.lastChild);
+    var init_tbody = temp_tbody;   
+  
     setTableData();
     window.setInterval(setTableData, 2000)
   
@@ -88,13 +94,15 @@ window.onload = function(){
                 var currTable = document.getElementById("tablebody1");
                 var tableLength = currTable.childNodes.length;
                 var i;
-      
+                
+              /*
                 for(i = tableLength - 1; i > 0 ; i--){
                   if(currTable.childNodes[i].id != "tableheader" && currTable.childNodes[i].id != "inputrow"){
                     currTable.removeChild(currTable.childNodes[i])
                   }
                  }
-        
+              */
+                temp_tbody = init_tbody;
                 console.log(JSON.stringify(data));
                 data.forEach(function(object) {
                     var tr = document.createElement('tr');
@@ -104,9 +112,10 @@ window.onload = function(){
                                     '<td>' + object.screensize + '</td>' +
                                     '<td> <img class="defaultImg" src="' +  object.image + '"></td>';
                     
-                    $(tr).insertBefore(document.getElementById("inputrow"));
+                    $(tr).insertBefore(temp_tbody.lastChild);
                 });
-  }
+              currTable.childNodes = temp_tbody.childNodes;
+            }
   
   
   
