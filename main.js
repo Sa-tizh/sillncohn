@@ -58,8 +58,8 @@ window.onload = function(){
     
     //test
   
-    var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "<tr>";
-    var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "<tr>";
+    var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "</tr>";
+    var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "</tr>";
     console.log(table_begin_html);
     console.log(table_end_html);
   
@@ -94,7 +94,7 @@ window.onload = function(){
                 var currTable = document.getElementById("tablebody1");
                 var tableLength = currTable.childNodes.length;
                 var i;
-                
+                var table_html = table_begin_html;
               /*
                 for(i = tableLength - 1; i > 0 ; i--){
                   if(currTable.childNodes[i].id != "tableheader" && currTable.childNodes[i].id != "inputrow"){
@@ -102,19 +102,16 @@ window.onload = function(){
                   }
                  }
               */
-                temp_tbody = init_tbody;
+               
                 console.log(JSON.stringify(data));
                 data.forEach(function(object) {
-                    var tr = document.createElement('tr');
-                    tr.innerHTML = '<td>' + object.brand + '</td>' +
+                    table_html += '<tr><td>' + object.brand + '</td>' +
                                     '<td>' + object.model + '</td>' +
                                     '<td>' + object.os + '</td>' +
                                     '<td>' + object.screensize + '</td>' +
-                                    '<td> <img class="defaultImg" src="' +  object.image + '"></td>';
-                    
-                    $(tr).insertBefore(temp_tbody.lastChild);
+                                    '<td> <img class="defaultImg" src="' +  object.image + '"></td></tr>';
                 });
-              //currTable.childNodes = temp_tbody.childNodes;
+              currTable.innerHTML = table_html + table_end_html
             }
   
   
