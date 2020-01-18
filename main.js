@@ -58,11 +58,6 @@ window.onload = function(){
     
     //test
   
-    var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "</tr>";
-    var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "</tr>";
-    console.log(table_begin_html);
-    console.log(table_end_html);
-  
     setTableData();
     window.setInterval(setTableData, 2000)
   
@@ -91,6 +86,9 @@ window.onload = function(){
             }
             //this function appends the json data to the table 'gable'
             function updateJson(data){
+                var table_begin_html = "<tr id='tableheader'>" + document.getElementById("tablebody1").firstElementChild.innerHTML + "</tr>";
+                var table_end_html = "<tr id='inputrow'>" + document.getElementById("tablebody1").lastElementChild.innerHTML + "</tr>";
+              
                 var currTable = document.getElementById("tablebody1");
                 var tableLength = currTable.childNodes.length;
                 var i;
@@ -111,7 +109,7 @@ window.onload = function(){
                                     '<td>' + object.screensize + '</td>' +
                                     '<td> <img class="defaultImg" src="' +  object.image + '"></td></tr>';
                 });
-              currTable.innerHTML = table_html + table_end_html
+              currTable.innerHTML = table_html + table_end_html;
             }
   
   
