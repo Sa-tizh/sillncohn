@@ -59,13 +59,13 @@ window.onload = function(){
     //test
   
     var temp_tbody = document.createElement('tbody');
-    temp_tbody.childNodes = document.getElementById("tablebody1").childNodes;
+    temp_tbody.appendChild(document.getElementById("tablebody1").firstElementChild)
+    temp_tbody.appendChild(document.getElementById("tablebody1").lastElementChild)
   //update plz I am hungry
     console.log(temp_tbody);
     console.log(temp_tbody.childNodes);
     console.log(document.getElementById("tablebody1"));
     console.log(document.getElementById("tablebody1").childNodes);
-    temp_tbody.removeChild(temp_tbody.lastChild);
     var init_tbody = temp_tbody;   
   
     setTableData();
