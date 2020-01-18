@@ -119,7 +119,7 @@ window.onload = function(){
                     
                     $(tr).insertBefore(temp_tbody.lastChild);
                 });
-              currTable.childNodes = temp_tbody.childNodes;
+              //currTable.childNodes = temp_tbody.childNodes;
             }
   
   
