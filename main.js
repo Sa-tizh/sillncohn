@@ -8,24 +8,26 @@ window.onload = function(){
      document.getElementById("th2.1").addEventListener("click", function(){ sortTable(0, 2)});
      document.getElementById("th2.2").addEventListener("click", function(){ sortTable(1, 2)});
      document.getElementById("th2.3").addEventListener("click", function(){ sortTable(2, 2)});
+  
+    // Code used as base for the following function https://www.geeksforgeeks.org/how-to-sort-rows-in-a-table-using-javascript/
    
-     //implementation of bubblesort on a table
+     //this algorithm uses bubblesort for the tablerows
      function sortTable(n, tableNumber) { 
          console.log("done");
          var table, i, x, y; 
          table = document.getElementById("tablebody" + tableNumber); 
          var switching = true; 
   
-         // Run loop until no switching is needed 
+         // Run loop until no switching is needed anymore
          while (switching) { 
              switching = false; 
              var rows = table.rows; 
   
-             // Loop to go through all rows 
+             // Loop through all rows 
              for (i = 0; i < (rows.length - 1); i++) { 
                  var Switch = false; 
   
-                 // Fetch 2 elements that need to be compared 
+                 // get the 2 rows that are being compared
                  x = rows[i].getElementsByTagName("TD")[n]; 
                  y = rows[i + 1].getElementsByTagName("TD")[n]; 
   
@@ -46,7 +48,7 @@ window.onload = function(){
                  } 
              } 
              if (Switch) { 
-                 // Function to switch rows and mark switch as completed 
+                 // switch rows, switch is completed
                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
                  switching = true; 
              } 
@@ -59,7 +61,7 @@ window.onload = function(){
     function resetForm(){
         var xhttpreset = new XMLHttpRequest();
   
-        xhttpreset.open("GET", "https://wt.ops.labs.vu.nl/api20/14d61d4c/reset", true);
+        xhttpreset.open("GET", "https://wt.ops.labs.vu.nl/api20/14d61d4c/reset", true); //send a get request with the reset url
         xhttpreset.send();
     }
     
@@ -67,29 +69,31 @@ window.onload = function(){
     setTableData();
     window.setInterval(setTableData, update_time)
   
+    // Code used as base for the following 2 functions https://stackoverflow.com/questions/51275730/populate-html-table-with-json-data
+  
     function setTableData(){
-        // Relative URL of external json file
+        // url of database
         var json_url = "https://wt.ops.labs.vu.nl/api20/14d61d4c/";
   
-        //Build the XMLHttpRequest (aka AJAX Request)
+        //Build the ajax request
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() { 
-            //when a good response is given do this  
+            //when correct response, pass the data to the updateJson function 
             if (this.readyState == 4 && this.status == 200) {
                 var data = JSON.parse(this.responseText); // convert the response to a json object
                 updateJson(data);// pass the json object to the append_json function
             }
         }
       
-        //set the request destination and type
+        //setup the request
         xmlhttp.open("GET", json_url, true);
-        //set required headers for the request
+        //set request headers
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        // send the request
+        
         xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
     }
     
-    //this function appends the json data to the table 'gable'
+    //this function puts the json data into the table
     function updateJson(data){
         var table_body = document.getElementById("tablebody1");
         var table_html = "";
