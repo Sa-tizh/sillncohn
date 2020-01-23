@@ -17,7 +17,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
       throw err
     }else{
         console.log('Connected to the SQLite database.')
-        db.run(`CREATE TABLE user (
+        db.run(`CREATE TABLE product (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             brand text, 
             model text UNIQUE,
@@ -31,7 +31,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
                 // Table already created
             }else{
                 // Table just created, creating some rows
-                var insert = 'INSERT INTO user (brand, model, os, screensize, image) VALUES (?,?,?,?,?)'
+                var insert = 'INSERT INTO product (brand, model, os, screensize, image) VALUES (?,?,?,?,?)'
                 db.run(insert, ["Apple", "iPhone X", "iOS", 8, "https://consumentenbond-res.cloudinary.com/w_1400,f_auto/e_improve:30/v0/productvergelijker/MOBTEL/900611_kk_10"])
                 db.run(insert, ["Samsung", "Galaxy S9", "Android", 11, "https://image.samsung.com/us/smartphones/galaxy-s9/phones/S9/Blue/0914-GI-GS9-PDP-Back-Blue.jpg"])
             }
@@ -54,7 +54,7 @@ app.get("/", (req, res, next) => {
 
 // Insert here other API endpoints
 app.get("/api/products", (req, res, next) => {
-    var sql = "select * from user"
+    var sql = "select * from product"
     var params = []
     db.all(sql, params, (err, rows) => {
         if (err) {
@@ -69,12 +69,20 @@ app.get("/api/products", (req, res, next) => {
 });
 
 app.get("/api/product/:id", (req, res, next) => {
-    var sql = "select * from user where id = ?"
+    var sql = "select * from product where id = ?"
     var params = [req.params.id]
     db.get(sql, params, (err, row) => {
+	var errors = []
+	if(typeof row == "undefined"){
+	     errors.push("No product with specified id.");
+	}
+	if (errors.length){
+             res.status(400).json({"error":errors.join(" ")});
+             return;
+        }
         if (err) {
-          res.status(400).json({"error":err.message});
-          return;
+            res.status(400).json({"error":err.message});
+            return;
         }
         res.json({
             "message":"success",
@@ -116,14 +124,14 @@ app.post("/api/product/", (req, res, next) => {
         screensize: req.body.screensize,
         image: req.body.image        
     }
-    var sql ='INSERT INTO user (brand, model, os, screensize, image) VALUES (?,?,?,?,?)'
+    var sql ='INSERT INTO product (brand, model, os, screensize, image) VALUES (?,?,?,?,?)'
     var params =[data.brand, data.model, data.os, data.screensize, data.image]
     db.run(sql, params, function (err, result) {
-        if (err){
+	if (err){
             res.status(400).json({"error": err.message})
             return;
         }
-        res.json({
+        res.status(201).json({
             "message": "success",
             "data": data,
             "id" : this.lastID
@@ -167,7 +175,7 @@ app.put("/api/product/:id", (req, res, next) => {
         image: req.body.image
     }
     db.run(
-        `UPDATE user set 
+        `UPDATE product set 
            brand = COALESCE(?,brand), 
            model = COALESCE(?,model),
            os = COALESCE(?,os), 
@@ -176,6 +184,14 @@ app.put("/api/product/:id", (req, res, next) => {
            WHERE id = ?`,
         [data.brand, data.model, data.os, data.screensize, data.image, req.params.id],
         function (err, result) {
+	    var errors = []
+	    if(!this.changes){
+	    	errors.push("No product with specified id.");
+	    }
+	    if (errors.length){
+            	res.status(400).json({"error":errors.join(" ")});
+             	return;
+            }
             if (err){
                 res.status(400).json({"error": err.message})
                 return;
@@ -190,9 +206,17 @@ app.put("/api/product/:id", (req, res, next) => {
 
 app.delete("/api/product/:id", (req, res, next) => {
     db.run(
-        'DELETE FROM user WHERE id = ?',
+        'DELETE FROM product WHERE id = ?',
         req.params.id,
         function (err, result) {
+	    var errors = []
+	    if(!this.changes){
+	     	errors.push("No product with specified id.");
+	    }
+	    if (errors.length){
+             	res.status(400).json({"error":errors.join(" ")});
+             	return;
+            }
             if (err){
                 res.status(400).json({"error": res.message})
                 return;
