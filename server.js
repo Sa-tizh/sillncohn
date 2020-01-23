@@ -1,7 +1,6 @@
 // Create express app
 var express = require("express")
 var app = express()
-var md5 = require("md5")
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -227,5 +226,5 @@ app.delete("/api/product/:id", (req, res, next) => {
 
 // Default response for any other request
 app.use(function(req, res){
-    res.status(404);
+    res.status(404).json({"message":"Page not found."});
 });
