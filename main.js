@@ -63,11 +63,10 @@ window.onload = function(){
   
         xhttpreset.open("GET", "https://wt.ops.labs.vu.nl/api20/14d61d4c/reset", true); //send a get request with the reset url
         xhttpreset.send();
+        setTableData();
     }
     
-    var update_time = 2000;
     setTableData();
-    window.setInterval(setTableData, update_time)
   
     // Code used as base for the following 2 functions https://stackoverflow.com/questions/51275730/populate-html-table-with-json-data
   
