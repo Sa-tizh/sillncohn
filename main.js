@@ -10,7 +10,9 @@ window.onload = function(){
      document.getElementById("th2.3").addEventListener("click", function(){ sortTable(2, 2)});
   
     // Code used as base for the following function https://www.geeksforgeeks.org/how-to-sort-rows-in-a-table-using-javascript/
-   
+     
+     var lastN = -99;
+  
      //this algorithm uses bubblesort for the tablerows
      function sortTable(n, tableNumber) { 
          console.log("done");
@@ -32,27 +34,46 @@ window.onload = function(){
                  y = rows[i + 1].getElementsByTagName("TD")[n]; 
   
                  // Check if 2 rows need to be switched, for text 
-                 if (n != 3 && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
-                     { 
-                     // If yes, mark Switch as needed and break loop 
-                     Switch = true; 
-                     break; 
-                 }
+                 if (lastN != n){
+                      if (n != 3 && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+                      { 
+                          // If yes, mark Switch as needed and break loop 
+                          Switch = true; 
+                          break; 
+                      }
                
                  // Check if 2 rows need to be switched, for numbers
-                 if (n == 3 && parseInt(x.innerHTML) > parseInt(y.innerHTML))
+                     if (n == 3 && parseInt(x.innerHTML) > parseInt(y.innerHTML))
                      { 
-                     // If yes, mark Switch as needed and break loop 
-                     Switch = true; 
-                     break; 
+                          // If yes, mark Switch as needed and break loop 
+                          Switch = true; 
+                          break; 
+                     }
                  } 
+                 else{
+                     if (n != 3 && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
+                     { 
+                        // If yes, mark Switch as needed and break loop 
+                        Switch = true; 
+                        break; 
+                     }
+               
+                     // Check if 2 rows need to be switched, for numbers
+                     if (n == 3 && parseInt(x.innerHTML) < parseInt(y.innerHTML))
+                     { 
+                        // If yes, mark Switch as needed and break loop 
+                        Switch = true; 
+                        break; 
+                     }
+                 }
              } 
              if (Switch) { 
                  // switch rows, switch is completed
                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
                  switching = true; 
              } 
-         } 
+         }
+         lastN = n;
      } 
     
     var resetButton = document.getElementById("reset");
