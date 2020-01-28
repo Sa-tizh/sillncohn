@@ -12,6 +12,7 @@ window.onload = function(){
     // Code used as base for the following function https://www.geeksforgeeks.org/how-to-sort-rows-in-a-table-using-javascript/
      
      var lastN = -99;
+     var shouldReverse = -1;
   
      //this algorithm uses bubblesort for the tablerows
      function sortTable(n, tableNumber) { 
@@ -19,7 +20,10 @@ window.onload = function(){
          var table, i, x, y; 
          table = document.getElementById("tablebody" + tableNumber); 
          var switching = true; 
-  
+         
+         if(lastN == n){shouldReverse *= -1;}
+         else {shouldReverse = -1;}
+       
          // Run loop until no switching is needed anymore
          while (switching) { 
              switching = false; 
@@ -34,7 +38,7 @@ window.onload = function(){
                  y = rows[i + 1].getElementsByTagName("TD")[n]; 
   
                  // Check if 2 rows need to be switched, for text 
-                 if (lastN != n){
+                 if (shouldReverse == -1){
                       if (n != 3 && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
                       { 
                           // If yes, mark Switch as needed and break loop 
