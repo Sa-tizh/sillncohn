@@ -88,7 +88,7 @@ window.onload = function(){
         //setup the request
         xmlhttp.open("GET", json_url, true);
         //set request headers
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded", "Access-Control-Allow-Origin");
         
         xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
     }
