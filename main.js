@@ -124,7 +124,7 @@ window.onload = function(){
             '<td>' + object.model + '</td>' +
             '<td>' + object.os + '</td>' +
             '<td>' + object.screensize + '</td>' +
-            '<td> <img class="defaultImg" src="' +  object.image + '"></td></tr>';
+            '<td> <img class="defaultImg" alt="image src="' +  object.image + '"></td></tr>';
         });
       
         table_body.innerHTML = table_html;
