@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="assignment4.css">
+    </head>
+
+    <body>
+        <h1>Assignment 4 “Synthesis & Evaluation”</h1>
+        <h3>28-01-2020; Group 62: Sebas Fredrik & Steijn Lek</h3>
+
+        <br>
+        <br>
+
+        <h2>Introduction</h2>
+        <p>In general, our webpage is not fully understandable and accessible for everyone, for example also blind people. But we can say that we did a lot to improve the experience for the visually, mentally and/or physically impaired.  
+            <br>Our webpage is build in such a way that it is very intuitive for the user to interact with, there is a clear and organized structure and all functionality is accessible with keyboard input.<br>Furthermore, the website uses different colors to indicate certain states, for example if a link or input field is visited or not. <br>It is also has a responsive layout which means the layout of the webpage is adapted to different screen sizes like for example a tablet or smartphone. 
+            <br>On the way we did make a few mistakes, but in the end we made our accessibility reflect our current knowledge and skill level, which we think is pretty good.
+        </p>
+
+        <br>
+
+        <h2>Accessibility Highlights</h2>
+        <p>Due to our website being light on content, we had few WCAG guidelines that were important for us. This however also meant we could very easily narrow down the most relevant rules we had to follow for our webpage.
+            <br>The first guideline that we wanted to report on is “”1.1 All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.” <br>This one we deemed very important for basically any websites, which is why it’s unfortunate that we did not fully commit to it. <br>We did put an alt text for our one picture in our html file, but we forgot to add it for our input form, which means visually impaired people would have a difficult time adding items to or resetting the database of products. <br>Furthermore images added in post using the web server do not get an alt text added to them. <br>Neither of these are too important, since not many people would want to add things to the database, and the relationship of the image in the table could determined from the column header, but either way there is room for improvement here.
+            <br>The other guideline we deemed relevant is “2.1.1 All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.” <br>This one we followed completely. The entirety of the page can be navigated with the arrow keys, tab key and enter key. <br>No dexterity is needed of the user in terms of timings of keystrokes or speed of typing. <br>This rule we found most important and we had no issue implementing our website to conform to it. 
+            </p>
+    
+        <table>
+            <h2>Appendix A</h2>
+        <tr>
+            <th>Guideline</th>
+            <th>Assessment</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td>1.1 All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.</td>
+            <td>No</td>
+            <td>Every image in the webpage has an alt attribute. The input fields don’t have an alt attribute, which means that a blind will not be able to use the input fields.</td>
+        </tr>
+        <tr>
+            <td>1.3.1 Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</td>
+            <td>Yes</td>
+            <td>All stand-alone information is available in text. Relationships between pieces of information are presented with different formatting and use appropriate html tags so they can also be programmatically determined.</td>
+        </tr>
+        <tr>
+            <td>1.3.2 When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.</td>
+            <td>Yes</td>
+            <td>Everything we have in our webpage can be read in any order.</td>
+        </tr>
+        <tr>
+            <td>1.3.3 Instructions provided for understanding and operating content do not rely solely on sensor characteristics of components such as shape, size, visual location orientation, or sound.</td>
+            <td>No</td>
+            <td>We do not have any instructions provided for operating or understanding our content. This is mainly because we think our webpage is very basic and intuitive, which means that no further instructions would be unnecessary.</td>
+        </tr>
+        <tr>
+            <td>1.4.1 Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</td>
+            <td>Yes</td>
+            <td>All color used to convey information is accompanied by text that conveys the same information. For example in the input field if a user submits without filling in the form, the text "Vul dit veld in" shows.</td>
+        </tr>
+        <tr>
+            <td>1.4.2 If any audio on a web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.</td>
+            <td>No</td>
+            <td>No audio is played on our website.</td>
+        </tr>
+        <tr>
+            <td>2.1.1 All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.</td>
+            <td>Yes</td>
+            <td>The only functionalities in our webpage which require action from the user are the navigation links and the input fields and submit button in the table. These are all operable with input from the keyboard by using the tab and enter keys.</td>
+        </tr>
+        <tr>
+            <td>2.1.2 If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.</td>
+            <td>Yes</td>
+            <td>All components that the keyboard focus can be moved to can be moved away from.</td>
+        </tr>
+        <tr>
+            <td>2.4.1 A mechanism is available to bypass blocks of content that are repeated on multiple web pages.</td>
+            <td>No</td>
+            <td>We only have one web page, so content can’t be repeated on multiple web pages.</td>
+        </tr>
+        <tr>
+            <td>2.4.2 Web pages have titles that describe topic or purpose.</td>
+            <td>No</td>
+            <td>Our title does not describe the actual content of the webpage, but describes the function it has in the context of our education.</td>
+        </tr>
+        <tr>
+            <td>2.4.3 If a web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.</td>
+            <td>Yes</td>
+            <td>Navigation sequences do not affect the meaning or operation.</td>
+        </tr>
+        <tr>
+            <td>2.4.4 The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.</td>
+            <td>No</td>
+            <td>If the links were functional, one would be able to determine what the purpose of each link was, except for one link that is ambiguous to all users (“Learn more”). However, all links don’t link to anything, so their use cannot yet be accurately determined at all.</td>
+        </tr>
+    </table>
+
+    <br>
+    
+    <table>
+        <h2>Appendix B</h2>
+        <tr>
+            <th>Type</th>
+            <th>Feedback</th>
+        </tr>
+        <tr>
+            <td>Assignment 1, Technical</td>
+            <td>Missing an alternative type in the interactive form.
+                Line 28, class par1 only used once.
+            </td>
+        </tr>
+        <tr>
+            <td>Assignment 1, Positive</td>
+            <td>Correctly named HTML file. 
+                Indentation very good. 
+                Good meta tag. 
+                Correctly named css files.
+            </td>
+        </tr>
+        <tr>
+            <td>Assignment 1, Negative</td>
+            <td>Lines 25-44, if you use row and col, why not use a table?
+                First page is empty on print screen.
+                Table does not resize
+            </td>
+        </tr>
+        <tr>
+            <td>Assignment 2, Technical</td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Assignment 2, Positive</td>
+            <td>Numbers sorted correctly.
+                Good JS implementation.
+                Good file names.
+                Correct zip file name.
+            </td>
+        </tr>
+        <tr>
+            <td>Assignment 2, Negative</td>
+            <td>Table only sortable in 1 direction.
+                Reload timer could have been avoided.
+            </td>
+        </tr>
+        
+    </table>
+    </body>
+
+
+
+</html>
