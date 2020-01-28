@@ -73,7 +73,7 @@ nav, p, pre, section, div {
 
 /* first section */
 
-.par1 {
+#par1 {
   font-size: 14px;
   margin: 10px 10px 10px 10px;
   font-style: normal;
