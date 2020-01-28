@@ -65,9 +65,31 @@ window.onload = function(){
         xhttpreset.send();
         setTableData();
     }
-    
-    setTableData();
   
+    var submitButton = document.getElementById("submit");
+    submitButton.addEventListener("click", submitForm);
+  
+    function submitForm(){
+        $( "#rowAdd" ).submit(function( e ) {
+              e.preventDefault();
+              $.ajax({
+                  url: "https://wt.ops.labs.vu.nl/api20/14d61d4c",
+                  type:'POST',
+                  data:
+                  {
+                      brand: $('#brand').val(),
+                      model: $('#model').val(),
+                      os: $('#os').val(),
+                      screensize: $('#screensize').val(),
+                      image: $('#image').val()
+                  }       
+              });
+            });
+          setTableData();
+    }
+  
+    setTableData();
+    
     // Code used as base for the following 2 functions https://stackoverflow.com/questions/51275730/populate-html-table-with-json-data
   
     function setTableData(){
